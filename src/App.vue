@@ -525,7 +525,7 @@ footer {
     padding: 0 calc(35vw - 105px);
   }
   #app{
-    background-image: url('@/assets/img/logo.png');
+    background-image: url('@/assets/img/backgroundMobile.png');
 
   }
   .line {
