@@ -25,6 +25,10 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', updateScreenSize)
 })
 
+function moveTo() {
+  window.location.href = 'https://drgnreturn.com/'
+}
+
 const steps = [
   {
     title: 'Зарегистрируйся',
@@ -118,7 +122,7 @@ const stepsMob = [
         </div>
         <StepApp class="mobile" :list="screenWidth <= 480 ? stepsMob : steps1024" />
 
-        <button class="main__button button">получить бонус</button>
+        <button class="main__button button" @click="moveTo">получить бонус</button>
       </div>
     </div>
     <StepApp class="desc" :list="steps" />
@@ -524,9 +528,8 @@ footer {
   footer {
     padding: 0 calc(35vw - 105px);
   }
-  #app{
+  #app {
     background-image: url('@/assets/img/backgroundMobile.png');
-
   }
   .line {
     &__first {
