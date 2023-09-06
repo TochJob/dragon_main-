@@ -4,7 +4,12 @@ import FooterApp from '@/components/FooterApp.vue'
 import BSecondLine from '@/components/svg/BSecondLine.vue'
 import StepApp from '@/components/StepApp.vue'
 
+import logo from '@/assets/img/logo.png'
+import dragon from '@/assets/img/main.png'
+
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+
 
 const screenWidth = ref(window.innerWidth)
 const screenHeight = ref(window.innerHeight)
@@ -109,11 +114,11 @@ const stepsMob = [
     <BMainLine class="line line__first" />
     <BMainLine class="line line__second" />
     <BMainLine class="line line__third" />
-    <img class="main__logo" src="@/assets/img/main.png" alt="main logo" />
+    <img class="main__logo" :src="dragon" alt="main logo" />
 
     <div class="main">
       <div class="main__box">
-        <img class="main__icon" src="@/assets/img/logo.png" alt="logo" />
+        <img class="main__icon" :src="logo" alt="logo" />
         <h1 class="main__title">бонус</h1>
         <div class="wrapper">
           <p class="main__text">до</p>
