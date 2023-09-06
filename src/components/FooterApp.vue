@@ -1,31 +1,30 @@
+<script setup>
+const wallets = ['plast', 'visa', 'p2p', 'fk', 'ym']
+const coins = ['bit', 'lite', 'eth']
+let walletsArr = []
+let coinsArr = []
+for (let item of wallets) {
+  const path = new URL(`../assets/img/wallets/${item}.png`, import.meta.url).href
+  walletsArr.push(path)
+}
+for (let item of coins) {
+  const path = new URL(`../assets/img/coins/${item}.png`, import.meta.url).href
+  coinsArr.push(path)
+}
+</script>
 <template>
   <footer class="footer">
     <div class="footer__box">
       <div class="wrapper footer__wallets wallets">
-        <img
-          v-for="(item, index) of wallets"
-          :key="index"
-          :src="`/img/wallets/${item}`"
-          alt="wallet"
-        />
+        <img v-for="(item, index) of walletsArr" :key="index" :src="item" alt="wallet" />
       </div>
       <div class="wrapper footer__wallets coins">
-        <img
-          v-for="(item, index) of coins"
-          :key="index"
-          :src="`/img/coins/${item}`"
-          alt="coin"
-        />
+        <img v-for="(item, index) of coinsArr" :key="index" :src="item" alt="coin" />
       </div>
     </div>
     <p class="footer__licence">© 2023 Dragon Money. All rights reserved</p>
   </footer>
 </template>
-
-<script setup>
-const wallets = ['plast.png', 'visa.png', 'p2p.png', 'fk.png', 'ym.png'];
-const coins = ['bit.png', 'lite.png', 'eth.png'];
-</script>
 
 <style lang="scss" scoped>
 .footer {
@@ -60,7 +59,7 @@ const coins = ['bit.png', 'lite.png', 'eth.png'];
   }
 }
 @media (max-width: 576px) {
-  .footer{
+  .footer {
     padding: 50px 0 15px;
     gap: 40px;
     .wallets {
@@ -104,7 +103,7 @@ const coins = ['bit.png', 'lite.png', 'eth.png'];
   .footer {
     gap: 33px;
     padding: 38px 0 7px;
-    &__box{
+    &__box {
       gap: 8px;
     }
     .wallets {
@@ -142,7 +141,7 @@ const coins = ['bit.png', 'lite.png', 'eth.png'];
         }
       }
     }
-    &__licence{
+    &__licence {
       font-size: 7px;
     }
   }
