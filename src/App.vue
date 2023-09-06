@@ -114,11 +114,11 @@ const stepsMob = [
     <BMainLine class="line line__first" />
     <BMainLine class="line line__second" />
     <BMainLine class="line line__third" />
-    <img class="main__logo" :src="dragon" alt="main logo" />
+    <img class="main__logo" src="./assets/img/main.png" alt="main logo" />
 
     <div class="main">
       <div class="main__box">
-        <img class="main__icon" :src="logo" alt="logo" />
+        <img class="main__icon" src="./assets/img/logo.png" alt="logo" />
         <h1 class="main__title">бонус</h1>
         <div class="wrapper">
           <p class="main__text">до</p>
@@ -140,7 +140,7 @@ const stepsMob = [
 @import '@/assets/scss/animation.scss';
 #app {
   // background: radial-gradient(124.98% 61.75% at 36.24% 50%, #202331 33.85%, #181a25 100%);
-  background-image: url('@/assets/img/background.png');
+  background-image: url('./assets/img/background.png');
   overflow: hidden;
   position: relative;
 }
@@ -534,7 +534,7 @@ footer {
     padding: 0 calc(35vw - 105px);
   }
   #app {
-    background-image: url('@/assets/img/backgroundMobile.png');
+    background-image: url('./assets/img/backgroundMobile.png');
   }
   .line {
     &__first {
